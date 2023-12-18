@@ -71,7 +71,7 @@
                                </div>
                            </li>
                            <a href="{{ url('/mycart') }}" >
-                               <img src="{{ asset('image/cart.png') }}" class="cart" >
+                               <img src="{{ asset('image/cart.png') }}" class="cart">
                            </a>
                        @endguest
 
@@ -84,6 +84,11 @@
        <main class="py-4">
            @yield('content')
        </main>
+       <footer class="footer_design">
+
+            <p style="font-size:1.0em;">@copyright PetFoodshop</p>
+
+        </footer>
    </div>
 </body>
 </html>
