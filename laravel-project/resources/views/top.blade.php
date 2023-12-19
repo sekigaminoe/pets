@@ -23,7 +23,7 @@
                 <div class="mt-3 text-center">
                     <form action="/register" method="get">
                         @csrf
-                        <button class="btn btn-primary" style="width: 500px;">
+                        <button class="btn btn-primary mb-5" style="width: 500px;">
                             会員登録
                         </button>
                     </form>

@@ -16,34 +16,36 @@ use App\Mail\Thanks;
 
 class ShopController extends Controller
 {
-   public function index()
+   public function index(Request $request)
    {
-    $items = Item::Paginate(6);
-   //  $keyword = $request->input('keyword');
-   //  if(!empty($keyword)) {
-   //    $companies->where('name', 'LIKE', "%{$keyword}%")
-   //    ->orwhereHas('items', function ($query) use ($keyword) {
-   //    $query->where('name', 'LIKE', "%{$keyword}%");
-   //    })->get();
-   // }
-    return view('shop', compact('items'));
+      $keyword = $request->input('keyword');
+  
+      $query = Item::query();
+  
+      if (!empty($keyword)) {
+         $query->where('name', 'LIKE', "%{$keyword}%");
+      }
+
+      $items = $query->paginate(6);
+
+      return view('shop', compact('items', 'keyword'));
    }
 
    public function myCart(Cart $cart)
    {
-    $data = $cart->showCart();
-    return view('mycart', $data);
+      $data = $cart->showCart();
+      return view('mycart', $data);
    }
 
    public function addMycart(Request $request,Cart $cart)
    {
 
-    $item_id = $request->item_id;
-    $message = $cart->addCart($item_id);
+      $item_id = $request->item_id;
+      $message = $cart->addCart($item_id);
 
-    $data = $cart->showCart();
+      $data = $cart->showCart();
 
-    return view('mycart',$data)->with('message', $message);
+      return view('mycart',$data)->with('message', $message);
 
    }
 

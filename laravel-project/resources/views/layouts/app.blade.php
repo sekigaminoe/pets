@@ -41,6 +41,9 @@
                        <!-- Authentication Links -->
                        @guest
                            <li class="nav-item">
+                               <a class="nav-link" style="color:#fefefe;" href="/about">About</a>
+                           </li>
+                           <li class="nav-item">
                                <a class="nav-link" style="color:#fefefe;"  href="{{ route('login') }}">{{ __('ログイン') }}</a>
                            </li>
                            @if (Route::has('register'))
