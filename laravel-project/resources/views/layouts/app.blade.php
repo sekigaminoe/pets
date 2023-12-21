@@ -67,6 +67,7 @@
                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                        @csrf
                                    </form>
+                                   <a class="dropdown-item" href="{{url('user/edit')}}">プロフィール編集</a>
 
                                    <a class="dropdown-item" href="{{ url('/mycart') }}">
                                        カートを見る
@@ -89,7 +90,7 @@
        </main>
        <footer class="footer_design">
 
-            <p style="font-size:1.0em;">@copyright PetFoodshop</p>
+            <p style="font-size:1.0em;">@copyright PetFoodShop</p>
 
         </footer>
    </div>

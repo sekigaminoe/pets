@@ -4,13 +4,11 @@
 <div class="container-fluid">
    　<div class="">
        　<div class="mx-auto" style="max-width:1200px">
-            <div>
-                <form action="{{ route('shop') }}" method="GET">
-                    @csrf
-                    <input type="text" name="keyword" placeholder="商品名を入力" value="{{ $keyword }}">
-                    <input type="submit" value="検索">
-                </form>
-            </div> 
+            <form action="{{ route('shop') }}" method="GET">
+                @csrf
+                <input type="text" name="keyword" placeholder="商品名を入力" value="{{ $keyword }}">
+                <input type="submit" value="検索">
+            </form>
 
             <h1 style="color:#555555; text-align:center; font-size:1.2em; padding:24px 0px; font-weight:bold;">商品一覧</h1>
             <div class="">

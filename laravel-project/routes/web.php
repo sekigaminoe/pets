@@ -24,4 +24,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/mycart', 'ShopController@addMycart');
     Route::post('/cartdelete', 'ShopController@deleteCart');
     Route::post('/checkout', 'ShopController@checkout');
+    Route::get('/user/edit', 'UserController@edit')->name('user.edit');
+    Route::post('/user/update', 'UserController@update');
 });
