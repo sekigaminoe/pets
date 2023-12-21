@@ -1,5 +1,5 @@
 # PetFoodShop
-
+https://github.com/sekigaminoe/pets/assets/141192154/cd24d454-94a3-4ba5-8536-0c105afe6d08
 ## サイト概要
 ### サイトテーマ
 ペットフードを購入したり、見たりするECサイト。
